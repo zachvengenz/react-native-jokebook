@@ -15,13 +15,12 @@ import { CHUCK_API, CHUCK_QUERY } from "../constants";
 import { styles } from "../styles/styles";
 
 const ChuckNorris = () => {
-  const [category, setCategory] = useState("");
-  const [fetchId, setFetchId] = useState(0);
-  const [fact, setFact] = useState("Fact lands here!");
-  const [share, setShare] = useState(false);
-  const [query, setQuery] = useState("");
-  const [searching, setSearching] = useState(false);
-  const [list, setList] = useState([]);
+  const [category, setCategory] = useState<string>("");
+  const [fact, setFact] = useState<string>("Fact lands here!");
+  const [share, setShare] = useState<boolean>(false);
+  const [query, setQuery] = useState<string>("");
+  const [searching, setSearching] = useState<boolean>(false);
+  const [list, setList] = useState<string[]>([]);
 
   const fetchOneFact = async () => {
     const response = await fetch(CHUCK_API);
@@ -169,7 +168,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("animal");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Animal</Text>
@@ -178,7 +176,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("career");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Career</Text>
@@ -187,7 +184,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("celebrity");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Celebrity</Text>
@@ -196,7 +192,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("dev");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Dev</Text>
@@ -213,7 +208,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("explicit");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Explicit</Text>
@@ -222,7 +216,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("fashion");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Fashion</Text>
@@ -231,7 +224,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("food");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Food</Text>
@@ -240,7 +232,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("history");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>History</Text>
@@ -257,7 +248,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("money");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Money</Text>
@@ -266,7 +256,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("movie");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Movie</Text>
@@ -275,7 +264,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("music");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Music</Text>
@@ -284,7 +272,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("political");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Political</Text>
@@ -301,7 +288,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("religion");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Religion</Text>
@@ -310,7 +296,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("science");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Science</Text>
@@ -319,7 +304,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("sport");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Sport</Text>
@@ -328,7 +312,6 @@ const ChuckNorris = () => {
               style={styles.chuckButton}
               onPress={() => {
                 handleCategoryPress("travel");
-                setFetchId(fetchId + 1);
               }}
             >
               <Text style={styles.buttonOutlineText}>Travel</Text>

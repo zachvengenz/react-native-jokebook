@@ -9,16 +9,17 @@ import {
   View,
 } from "react-native";
 import { styles } from "../styles/styles";
+import { FormValues } from "../interfaces";
 
 const auth = getAuth();
 
 const SignUp: React.FC<StackScreenProps<any>> = ({ navigation }) => {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<FormValues>({
     email: "",
     password: "",
   });
-  const [pwCheck, setPwCheck] = useState("");
-  const [error, setError] = useState("");
+  const [pwCheck, setPwCheck] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
   const signUpButton = async () => {
     if (value.email === "" || value.password === "") {

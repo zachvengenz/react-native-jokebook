@@ -4,9 +4,9 @@ import { JOKE_API } from "../constants";
 import { styles } from "../styles/styles";
 
 const Jokes = () => {
-  const [category, setCategory] = useState("Any");
-  const [joke, setJoke] = useState("Your joke lands here!");
-  const [share, setShare] = useState(false);
+  const [category, setCategory] = useState<string>("Any");
+  const [joke, setJoke] = useState<string>("Your joke lands here!");
+  const [share, setShare] = useState<boolean>(false);
 
   const fetchOneJoke = async () => {
     const response = await fetch(JOKE_API + category);

@@ -14,11 +14,11 @@ import { app, database } from "../config/firebase";
 import { styles } from "../styles/styles";
 
 const WriteJokes = () => {
-  const [title, setTitle] = useState("");
-  const [joke, setJoke] = useState("");
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-  const [jokeTitles, setJokeTitles] = useState([]);
+  const [title, setTitle] = useState<string>("");
+  const [joke, setJoke] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [success, setSuccess] = useState<string>("");
+  const [jokeTitles, setJokeTitles] = useState<string[]>([]);
 
   const auth = getAuth(app);
   const user = auth.currentUser;

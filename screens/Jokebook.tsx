@@ -18,9 +18,9 @@ import { styles } from "../styles/styles";
 
 const Jokebook = () => {
   const [jokes, setJokes] = useState<Joke[]>([]);
-  const [editing, setEditing] = useState(false);
-  const [editingJoke, setEditingJoke] = useState("");
-  const [editingKey, setEditingKey] = useState("");
+  const [editing, setEditing] = useState<boolean>(false);
+  const [editingJoke, setEditingJoke] = useState<string>("");
+  const [editingKey, setEditingKey] = useState<string>("");
 
   const auth = getAuth(app);
   const user = auth.currentUser;

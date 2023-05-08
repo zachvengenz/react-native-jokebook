@@ -8,15 +8,16 @@ import {
   View,
 } from "react-native";
 import { styles } from "../styles/styles";
+import { FormValues } from "../interfaces";
 
 const auth = getAuth();
 
 const SignIn = () => {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<FormValues>({
     email: "",
     password: "",
   });
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string>("");
 
   const signInButton = async () => {
     if (value.email === "" || value.password === "") {
